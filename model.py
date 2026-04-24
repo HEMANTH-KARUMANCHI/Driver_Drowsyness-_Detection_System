@@ -11,6 +11,7 @@ from tensorflow.keras.layers import Conv2D , MaxPooling2D , Flatten , Dense
 # setting the path to our eye dataset: 
 Directory = r"C:\Users\Hemanth\OneDrive\Desktop\project DDD\Eye dataset"
 #Directory = r"C:\Users\akash jakkula\OneDrive\Desktop\project DDD\Eye dataset"
+
 # specify two categories on which we want to train our data:
 CATEGORIES = ['close_look' , 'forward_look']
 
@@ -61,6 +62,7 @@ X.shape
 # creating model:
 model = Sequential()
 
+# implementing with layers ( Convolutional, pooling, dense)
 model.add(Conv2D(64 , (3,3) , activation = 'relu' , input_shape= X.shape[1:]))
 model.add(MaxPooling2D((1,1)))
 
