@@ -29,10 +29,11 @@
     4.1 CNN Model
     A Convolutional Neural Network (CNN) is used to classify eye states.
     Architecture:
-    •	Convolutional Layers (Conv2D with ReLU activation)
-    •	MaxPooling Layers
-    •	Flatten Layer
-    •	Dense Layer (Fully connected)
+    # Hidden Layers:
+      •	Convolutional Layers (Conv2D with ReLU activation)
+      •	MaxPooling Layers
+      •	Flatten Layer
+      •	Dense Layer (Fully connected)
     •	Output Layer (Softmax for classification)
 
     
