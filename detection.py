@@ -8,12 +8,13 @@ import time
 # this is used to get beep sound (when person closes his eyes for more them 10sec)
 mixer.init()
 alarm_sound = mixer.Sound(r"C:\Users\Hemanth\Documents\Project\Driver Drowsyness\mixkit-vintage-warning-alarm-990.wav")
+
 # this xml files are used to detect face , left eye , and right eye of a person.
 face_detection = cv2.CascadeClassifier(r"C:\Users\Hemanth\Documents\Project\Driver Drowsyness\haarcascade_frontalface_alt.xml")
 left_eye_detection = cv2.CascadeClassifier(r"C:\Users\Hemanth\Documents\Project\Driver Drowsyness\haarcascade_lefteye_2splits.xml")
 right_eye_detection = cv2.CascadeClassifier(r"C:\Users\Hemanth\Documents\Project\Driver Drowsyness\haarcascade_righteye_2splits.xml")
 
-
+#lable categories
 labels =['Close','Open']
 
 # load the model, that we have created
@@ -53,9 +54,9 @@ while(True):
     cv2.rectangle(frame, (0,height-50) , (100,height) , (250,0,0) , thickness=cv2.FILLED )
     #Detccting the leftBottom layer Sleeping access
     cv2.rectangle(frame, (290,height-50) , (540,height) , (250,0,0) , thickness=cv2.FILLED )
+
     
     #iterating over faces and drawing boundary boxes for each face:
-    
     
     #iterating over right eye:
     for (x,y,w,h) in right_eye:
@@ -74,7 +75,8 @@ while(True):
             labels = 'Closed'
         break
 
-    #iterating over left eye:
+    
+    #iterating over the left eye:
     for (x,y,w,h) in left_eye:
         #pull out the left eye image from the frame:
         left_one=frame[y:y+h,x:x+w]
@@ -132,6 +134,7 @@ while(True):
     cv2.imshow('frame',frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-    
+
+# terminate after com[letion
 capture.release()
 cv2.destroyAllWindows()
