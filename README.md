@@ -18,7 +18,7 @@
     •	Python – Programming language
     •	OpenCV – Image processing and face/eye detection
     •	TensorFlow / Keras – Deep learning model development
-    •	NumPy – Numerical computations
+    •	NumPy – Numerical computations & manipulation
     •	Pygame – Alarm sound system
     •	Matplotlib – Data visualization
 
@@ -30,7 +30,7 @@
     A Convolutional Neural Network (CNN) is used to classify eye states.
     Architecture:
     # Hidden Layers:
-      •	Convolutional Layers (Conv2D with ReLU activation)
+      •	Convolutional Layers (Conv2D with ReLU activation function)
       •	MaxPooling Layers
       •	Flatten Layer
       •	Dense Layer (Fully connected)
